@@ -11,15 +11,15 @@ let template = Template(
     ],
     items: [
         .file(
-            path: "Project.swift",
+            path: "Projects/App/Project.swift",
             templatePath: "Project.stencil"
         ),
         .file(
-            path: "Sources/AppDelegate.swift",
+            path: "Projects/App/Sources/AppDelegate.swift",
             templatePath: "AppDelegate.stencil"
         ),
         .file(
-            path: "Resources/LaunchScreen.storyboard",
+            path: "Projects/App/Resources/LaunchScreen.storyboard",
             templatePath: "LaunchScreen.stencil"
         )
     ]
