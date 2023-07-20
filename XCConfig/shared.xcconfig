@@ -1,0 +1,7 @@
+OTHER_SWIFT_FLAGS[config=STG][sdk=*] = $(inherited) -DSTG 
+OTHER_SWIFT_FLAGS[config=PRD][sdk=*] = $(inherited) -DPRD
+
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) FLEXLAYOUT_SWIFT_PACKAGE=1
+
+ENABLE_BITCODE = NO
+ENABLE_TESTABILITY = true

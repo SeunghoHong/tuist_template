@@ -11,6 +11,10 @@ let template = Template(
     ],
     items: [
         .file(
+            path: "Workspace.swift",
+            templatePath: "Workspace.stencil"
+        ),
+        .file(
             path: "Projects/App/Project.swift",
             templatePath: "Project.stencil"
         ),
