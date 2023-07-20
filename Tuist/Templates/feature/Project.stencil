@@ -1,0 +1,18 @@
+import ProjectDescription
+import DependencyPlugin
+
+let project = Project(
+    name: "{{ name }}",
+    targets: [
+        Target(
+            name: "{{ name }}{{ type }}",
+            platform: .iOS,
+            product: .framework,
+            bundleId: "{{ organization }}.{{ name }}{{ type }}",
+            deploymentTarget: .iOS(targetVersion: "16.2", devices: [.iphone]),
+            sources: ["Sources/**"],
+            dependencies: [
+            ]
+        )
+    ]
+)

@@ -1,0 +1,53 @@
+
+import UIKit
+
+import RxSwift
+import RxCocoa
+import ReactorKit
+import PinLayout
+import FlexLayout
+
+
+final class {{ name }}ViewController: BaseViewController, View {
+    typealias Reactor = IntroViewReactor
+
+    var disposeBag = DisposeBag()
+
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.setup()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        self.layout()
+    }
+
+    func bind(reactor: {{ name }}ViewReactor) {
+    }
+}
+
+
+extension {{ name }}ViewController {
+
+    private func setup() {
+    }
+
+    private func layout() {
+    }
+}

@@ -1,0 +1,37 @@
+
+import Foundation
+
+import RxSwift
+import RxCocoa
+import ReactorKit
+import RxFlow
+
+
+final class {{ name }}ViewReactor: Reactor, Stepper {
+
+    enum Action {
+    }
+
+    enum Mutation {
+    }
+
+    struct State {
+    }
+
+    let initialState = State()
+    let steps = PublishRelay<Step>()
+
+
+    init() {
+    }
+
+    func mutate(action: Action) -> Observable<Mutation> {
+        return .empty()
+    }
+
+    func reduce(state: State, mutation: Mutation) -> State {
+        var state = state
+
+        return state
+    }
+}

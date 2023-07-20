@@ -1,0 +1,45 @@
+
+import UIKit
+
+import RxFlow
+
+
+public final class {{ name }}Flow: Flow {
+
+    public var root: Presentable {
+        return self.rootViewController
+    }
+
+    private let rootViewController = {{ name }}Controller()
+ 
+
+    public init() {
+    }
+
+    public func navigate(to step: Step) -> FlowContributors {
+        guard let step = step as? Step else { return .none }
+
+        switch step {
+        case .{{ name }}IsRequired:
+            return self.navigateTo{{ name }}()
+        default:
+            return .none
+        }
+    }
+}
+
+
+extension IntroFlow {
+
+    private func navigateTo{{ name }}() -> FlowContributors {
+        let {{ name }}ViewReactor = {{ name }}ViewReactor(with: self.provider)
+        self.rootViewController.reactor = {{ name }}ViewReactor
+
+        return .one(
+            flowContributor: .contribute(
+                withNextPresentable: self.rootViewController,
+                withNextStepper: {{ name }}ViewReactor
+            )
+        )
+    }
+}
